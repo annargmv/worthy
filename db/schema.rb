@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_18_182734) do
+ActiveRecord::Schema.define(version: 2019_09_18_204159) do
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "item_type"
-    t.decimal "item_carat_weight", precision: 10
+    t.float "item_carat_weight", default: 0.0
     t.string "item_cut"
     t.string "item_color"
     t.string "item_clarity"
