@@ -1,0 +1,16 @@
+<div class="results-container">
+  <%= bootstrap_flash %>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-2 control-label">
+    <%= label_tag :item_total_price%>
+  </div>
+  <div class="col-sm-2 control-label" id="results-container">
+    <!--    <strong>Total Price: </strong> <%#= @item.item_total_price %>-->
+    <%= text_field_tag :item_total_price, '' ,class: 'form-control', id: 'item_total_price-id', value: @item.item_total_price%>
+  </div>
+  <!--      <div class="col-xs-5" id="total_price_id">-->
+  <%#= f.text_field :total_price, class: 'form-horizontal', value: @item.item_total_price %>
+  <!--      </div>-->
+</div>
