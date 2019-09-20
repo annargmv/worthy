@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ItemsController < ApplicationController
   def new
     @item = Item.new
@@ -5,7 +7,10 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    @item.item_total_price = @item.total_price
+    @item.item_total_price = @item.total_price(params[:item_cut],
+                                               params[:item_color],
+                                               params[:item_clarity],
+                                               params[:item_carat_weight])
     # @item.item_cut = params[:item_cut]
     # @item.item_color = params[:item_color]
     # @item.item_clarity = params[:item_clarity]
