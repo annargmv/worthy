@@ -5,11 +5,17 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    @item.save
-    redirect_to jewelry_pricing_path
+    @item.item_total_price = @item.total_price
+    # @item.item_cut = params[:item_cut]
+    # @item.item_color = params[:item_color]
+    # @item.item_clarity = params[:item_clarity]
+    @item.save!
+
+    respond_to do |format|
+      format.js { render partial: 'items/result' }
+    end
   end
 end
-
 
 private
 
