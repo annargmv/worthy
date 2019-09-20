@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   get 'jewelry_pricing', to: 'items#new'
   post 'jewelry_pricing', to: 'items#create'
+
+  resources :items, only: [:new, :create]
 end
