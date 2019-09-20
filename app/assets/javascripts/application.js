@@ -10,9 +10,16 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery_ujs
+//= require jquery
 //= require rails-ujs
 //= require bootstrap-sprockets
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//
+
+$(document).ready(function(){
+    $('#stock-lookup-form').on('ajax:complete', function(event, data, status){
+        $('#results').html(data.responseText)
+    })
+})
