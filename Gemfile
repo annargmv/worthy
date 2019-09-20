@@ -17,6 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.4.1'
+gem 'bootstrap-sass-extras'
 gem 'jquery-rails'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
