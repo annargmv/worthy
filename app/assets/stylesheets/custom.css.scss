@@ -5,16 +5,21 @@
   padding-top: 15px;
 }
 
-label {
-  padding-left: 10px;
-  float: left;
-  text-align: right;
-  margin-right: 0.5em;
-  display: block
-}
+//label {
+//  padding-left: 10px;
+//  float: left;
+//  text-align: right;
+//  margin-right: 0.5em;
+//  display: block;
+//}
 
 select {
   display: inline-block
+}
+
+form-position {
+  margin: 0 auto;
+  width: 50px;
 }
 
 
