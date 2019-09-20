@@ -3,7 +3,7 @@
     <!--    having an horizontal view when adding to the form :html { class: 'class-name'} -->
     <%= form_tag jewelry_pricing_path, remote: true, method: 'post', class: 'form-horizontal', id: 'stock-lookup-form' do |f| %>
       <div class="form-group">
-        <div class="col-sm-2 control-label">
+        <div class="col-sm-7 control-label">
           <%= label_tag :item_type %>
         </div>
         <div class="col-xs-5">
@@ -12,7 +12,7 @@
       </div>
 
       <div class="form-group">
-        <div class="col-sm-2 control-label">
+        <div class="col-sm-7 control-label">
           <%= label_tag :carat_weight %>
         </div>
         <div class="col-xs-5">
@@ -21,7 +21,7 @@
       </div>
 
       <div class="form-group">
-        <div class="col-sm-2 control-label">
+        <div class="col-sm-7 control-label">
           <%= label_tag :item_cut %>
         </div>
         <div class="col-xs-5">
@@ -31,26 +31,28 @@
       </div>
 
       <div class="form-group">
-        <div class="col-sm-2 control-label">
+        <div class="col-sm-7 control-label">
           <%= label_tag :item_color %>
         </div>
         <div class="col-xs-5">
           <%#= f.text_field :item_color, class:"form-control", placeholder: "Please enter item color", autofocus: true %>
-          <%= select_tag "item_color", options_for_select(['Select color' ,'D','E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'R', 'S']), { :class=>"form-control", rows: 10, autofocus: true } %>
+          <%= select_tag "item_color", options_for_select(['Select color' ,'D','E', 'F', 'G', 'H', 'I', 'J']), { :class=>"form-control", rows: 10, autofocus: true } %>
         </div>
       </div>
 
       <div class="form-group">
-        <div class="col-sm-2 control-label">
+        <div class="col-sm-7 control-label">
           <%= label_tag :item_clarity %>
         </div>
         <div class="col-xs-5">
-          <%= select_tag "item_clarity", options_for_select(['Select clarity' ,'FL', 'IF', 'VVS1-VVS2', 'VS1-VS2', 'SI1-SI2', 'I1-I3']), { :class=>"form-control", rows: 10, autofocus: true } %>
+          <%= select_tag "item_clarity", options_for_select(['Select clarity','IF','VVS1','VVS2','VS1','VS2',
+                                                             'SI1','SI2']),
+                         { :class=>"form-control", rows: 10, autofocus: true } %>
         </div>
       </div>
 
       <div class="form-group" id="submit_id">
-        <div class="col-sm-offset-2 col-sm-10">
+        <div class="col-sm-offset-7 col-sm-10">
           <%= button_tag("Evaluate", type: :submit, class: 'btn btn-primary btn-sm') %>
         </div>
       </div>
