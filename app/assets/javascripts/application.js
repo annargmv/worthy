@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require popper
 //= require rails-ujs
 //= require bootstrap-sprockets
 //= require activestorage
@@ -23,3 +24,7 @@ $(document).ready(function(){
         $('#results').html(data.responseText)
     })
 })
+
+// $('#modal-window').on('shown.bs.modal', function () {
+//     $('#myInput').trigger('focus')
+// })
