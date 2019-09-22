@@ -11,10 +11,12 @@ class ItemsController < ApplicationController
                                                params[:item_color],
                                                params[:item_clarity],
                                                params[:item_carat_weight])
-    # @item.item_cut = params[:item_cut]
-    # @item.item_color = params[:item_color]
-    # @item.item_clarity = params[:item_clarity]
     @item.save!
+
+    @similar_items = SimilarItem.new(same_item_params)
+    @similar_items.similar_item = @item.item_cut
+    @similar_items.items_image(@similar_items.similar_item)
+    @similar_items.save!
 
     respond_to do |format|
       format.js { render partial: 'items/result' }
@@ -26,4 +28,8 @@ private
 
 def item_params
   params.permit(:item_type, :item_carat_weight, :item_cut, :item_color, :item_clarity)
+end
+
+def same_item_params
+  params.permit(:similar_item, :image_url)
 end
