@@ -25,6 +25,3 @@ $(document).ready(function(){
     })
 })
 
-// $('#modal-window').on('shown.bs.modal', function () {
-//     $('#myInput').trigger('focus')
-// })
