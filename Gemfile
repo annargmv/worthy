@@ -22,6 +22,9 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'bootstrap-sass-extras'
 gem 'jquery-rails'
 gem 'popper_js'
+gem 'figaro'
+gem 'aws-sdk', '~> 3'
+gem 'aws-sdk-ses'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
