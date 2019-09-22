@@ -2,11 +2,13 @@
   <%= bootstrap_flash %>
 </div>
 
-<div class="form-group">
-  <div class="col-sm-7 control-label">
-    <%= label_tag :item_total_price%>
+<%= form_tag jewelry_pricing_path, remote: true, method: 'post', class: 'form-horizontal', id: 'stock-lookup-form' do |f| %>
+  <div class="form-group">
+    <div class="col-sm-7 control-label">
+      <%= label_tag :item_total_price %>
+    </div>
+    <div class="col-sm-5 control-label" id="results-container">
+      <%= text_field_tag :item_total_price, '' ,class: 'form-control', id: 'item_total_price-id', value: @item.item_total_price %>
+    </div>
   </div>
-  <div class="col-sm-5 control-label" id="results-container">
-    <%= text_field_tag :item_total_price, '' ,class: 'form-control', id: 'item_total_price-id', value: @item.item_total_price%>
-  </div>
-</div>
+<% end %>

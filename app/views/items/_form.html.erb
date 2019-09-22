@@ -1,5 +1,5 @@
 <div class='row header'>
-  <div class='col-xs-5 form'>
+  <div class='col-xs-5 col-xs-offset-2 form'>
     <!--    having an horizontal view when adding to the form :html { class: 'class-name'} -->
     <%= form_tag jewelry_pricing_path, remote: true, method: 'post', class: 'form-horizontal', id: 'stock-lookup-form' do |f| %>
       <div class="form-group">
@@ -26,7 +26,6 @@
         </div>
         <div class="col-xs-5">
           <%= select_tag "item_cut", options_for_select(['Select cut' ,'Princes', 'Square Cushion', 'Radiant', 'Emerald', 'Round', 'Oval'], params[:item_cut]), { :class=>"form-control", row: 10, autofocus: true } %>
-          <%#= f.text_field :item_cut, class:"form-control", placeholder: "Please enter item cut", autofocus: true %>
         </div>
       </div>
 
@@ -35,7 +34,6 @@
           <%= label_tag :item_color %>
         </div>
         <div class="col-xs-5">
-          <%#= f.text_field :item_color, class:"form-control", placeholder: "Please enter item color", autofocus: true %>
           <%= select_tag "item_color", options_for_select(['Select color' ,'D','E', 'F', 'G', 'H', 'I', 'J']), { :class=>"form-control", rows: 10, autofocus: true } %>
         </div>
       </div>
@@ -53,13 +51,15 @@
 
       <div class="form-group" id="submit_id">
         <div class="col-sm-offset-7 col-sm-10">
-          <%= button_tag("Evaluate", type: :submit, class: 'btn btn-primary btn-sm') %>
+          <%= button_tag("Evaluate", type: :submit, class: 'btn btn-success btn-sm') %>
+          <%= button_tag("Reset", type: :reset, class: 'btn btn-danger btn-sm', id: 'reset_button_id') %>
         </div>
       </div>
 
       <div id="results">
         <%= render 'items/result' %>
       </div>
+
     <% end %>
   </div>
 </div>
