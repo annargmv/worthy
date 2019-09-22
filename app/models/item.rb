@@ -10,10 +10,9 @@ class Item < ApplicationRecord
   def total_price(item_cut, item_color, item_clarity, item_carat_weight)
     cut_value = cut_value_calculation(item_cut)
     color_clarity_value = color_and_clarity_value_calculation(item_color, item_clarity)
-    # carat_value = carat_weight_value_calculation(item_carat_weight)
 
     cut_color_clarity_sum = cut_value + color_clarity_value
-    total_price = BigDecimal.new(item_carat_weight) * cut_color_clarity_sum
+    total_price = sprintf('%.2f' ,BigDecimal.new(item_carat_weight) * cut_color_clarity_sum)
     total_price
   end
 
@@ -98,7 +97,4 @@ class Item < ApplicationRecord
     color_clarity_hash[item_color][item_clarity]
   end
 
-  # def carat_weight_value_calculation(item_carat_weigth)
-  #
-  # end
 end
