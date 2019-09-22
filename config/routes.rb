@@ -6,5 +6,9 @@ Rails.application.routes.draw do
   get 'jewelry_pricing', to: 'items#new'
   post 'jewelry_pricing', to: 'items#create'
 
+  get 'same_items/', to: 'similar_items#new'
+  post 'same_items', to: 'similar_items#create'
+
   resources :items, only: %i[new create]
+  resource :similar_items, only: 'new'
 end
