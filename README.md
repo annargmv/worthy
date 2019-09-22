@@ -8,7 +8,7 @@ Assumptions:
 
 1. We have only one item - Diamond
 2. The categories of cut, color contain only a subset of the possibilities.
-3. In order to create a price assessing calculator i've read the following: 
+3. In order to create an amazing calculator i've read the following: 
 
     3.1 https://www.creditdonkey.com/diamond-prices.html in order to understand the pricing and parameters
     
