@@ -1,0 +1,22 @@
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  <h3 id="myModalLabel">Similar Diamonds</h3>
+</div>
+<div class="modal-body">
+  <div class="picture">
+    <div class="col-sm-12">
+      <div class="row">
+        <% Dir.glob("#{Rails.root}/app/assets/images/*.jpg") do |item| %>
+          <% icon_base = File.basename(item) %>
+          <%= image_tag icon_base, size: "200x140", class: "img-fluid img-thumbnail mx-auto margin" %>
+        <% end %>
+      </div>
+      <% (1..4).each do %>
+          <ul id="label_id"><%= label_tag rand(17000..20000) %></ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button_tag class="btn btn-success" data-dismiss="modal" aria-hidden="true">Close</button_tag>
+</div>
